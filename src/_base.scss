@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700$display=swap");
+
+$text-color: #e5e7eb;
+
+$black-primary: black;
+$black-secondary: #121417;
+$border-color: #6b7280;
+
+$breakpoints-medium: 1224px;
+$breakpoints-small: 520px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: black;
+
+  color: $text-color;
+  font-family: "Roboto", sans-serif; // Specify the font-family correctly
+  letter-spacing: 0.1px;
+  overflow-x: hidden;
+}
+
+@mixin line-clamp($number) {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: $number;
+  -webkit-box-orient: vertical;
+}

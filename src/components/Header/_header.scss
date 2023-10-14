@@ -1,0 +1,87 @@
+@import "../../_base.scss";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  background-color: $black-primary;
+  height: 10vh;
+  width: 100vw;
+  &__menu {
+    display: none;
+  }
+  &__logo {
+    width: 50px;
+    object-fit: contect;
+    display: block;
+  }
+  form {
+    flex: 0.5;
+    display: flex;
+    padding: 0.1rem;
+    margin: 0.1rem;
+    border-radius: 20px;
+    border: 1.2px solid $border-color;
+    background-color: $black-primary;
+
+    input {
+      width: 100%;
+      border: none;
+      font-weight: 500;
+      background: transparent;
+      padding: 0.3rem 1rem;
+      color: $text-color;
+      &:focus {
+        outline: none;
+      }
+    }
+    button {
+      background: #4b5563;
+      padding: 0.1rem 1.25rem;
+      color: #d1d5db;
+      border: none;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+      &:focus {
+        border: none;
+      }
+    }
+  } 
+
+  &__icons {
+    flex: 0.15;
+    display: flex;
+    justify-contect: space-around;
+    align-items: center;
+    color: $text-color;
+    gap: 0.6rem;
+    img {
+      border-radius: 50%;
+      width: 40px;
+      object-fit: content;
+      margin-left: 5px;
+    }
+  }
+}
+
+@media (max-width: $breakpoints-small) {
+  .header {
+    padding: 2rem;
+
+    form {
+      flex: 0.8;
+    }
+    &__menu {
+      display: block;
+      color: $text-color;
+      margin-right: 10px;
+    }
+    &__logo {
+      display: none;
+    }
+    &__icons > *:not(img) {
+      display: none;
+    }
+  }
+}
